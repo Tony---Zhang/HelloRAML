@@ -2,71 +2,21 @@
 title: Hello RAML
 baseUri: https://{bucketName}.s3.amazonaws.com
 version: v1
-
-schemas:
-  - song: |
-      {
-        "type": "object",
-        "$schema": "http://json-schema.org/draft-03/schema",
-        "id": "http://jsonschema.net",
-        "required": true,
-        "properties": {
-          "songId": {
-            "type": "string",
-            "required": true,
-            "minLength": 36,
-            "maxLength": 36
-          },
-          "songTitle": {
-            "type": "string",
-            "required": true
-          },
-          "albumId": {
-            "type": "string",
-            "required": true,
-            "minLength": 36,
-            "maxLength": 36
-          }
-        }
-      }
-
+description: |
+  Show the full list of artists.
+  Show the full list of albums.
+  Show the list of artists by nationality.
+  Show the list of albums by genre.
+  Search for a song by title.
+  Show a particular artist's albums collection.
+  Show a particular album's songs list.
+  Play a song (by specifying the song id).
+  Enter new Artists, Albums and Songs (only authenticated users).
 /songs:
-  description: Collection of available songs in Jukebox
   get:
-    description: Get a list of songs based on the song title.
-    queryParameters:
-      songTitle:
-    responses:
-      200:
-        body:
-          application/json:
   post:
-    description: |
-      Add a new song to Jukebox.
-
-      The song needs to be created for the `/songs/{songId}/file-content` to exist.
-      You can use this second resource to get and post the file to reproduce.
-    body:
-      application/json:
-        schema: song
-        example: |
-          {
-            "songId": "550e8400-e29b-41d4-a716-446655440000",
-            "songTitle": "Get Lucky",
-            "albumId": "183100e3-0e2b-4404-a716-66104d440550"
-          }
   /{songId}:
-    description: Song entity
     get:
-      description: Get the song with `songId = {songId}`
-      responses:
-        200:
-          body:
-        404:
-          body:
-            application/json:
-              example: |
-                {"message": "Song not found"}
     /file-content:
       get:
       post:
