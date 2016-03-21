@@ -49,6 +49,8 @@ resourceTypes:
           200:
             body:
               application/json:
+                example: |
+                  <<exampleCollection>>
       post:
         description: |
           Add a new <<resourcePathName|!singularize>> to Jukebox.
@@ -61,6 +63,8 @@ resourceTypes:
         body:
           application/json:
             schema: <<resourcePathName|!singularize>>
+            example: |
+              <<exampleItem>>
         responses:
           200:
             body:
@@ -69,7 +73,29 @@ resourceTypes:
                     { "message": "The <<resourcePathName|!singularize>> has been properly entered" }
 
 /songs:
-  type: collection
+  type:
+    collection:
+      exampleCollection: |
+          [
+            {
+              "songId": "550e8400-e29b-41d4-a716-446655440000",
+              "songTitle": "Get Lucky"
+            },
+            {
+              "songId": "550e8400-e29b-41d4-a716-446655440111",
+              "songTitle": "Loose yourself to dance"
+            },
+            {
+              "songId": "550e8400-e29b-41d4-a716-446655440222",
+              "songTitle": "Gio sorgio by Morodera"
+            }
+          ]
+      exampleItem: |
+          {
+            "songId": "550e8400-e29b-41d4-a716-446655440000",
+            "songTitle": "Get Lucky",
+            "albumId": "183100e3-0e2b-4404-a716-66104d440550"
+          }
   get:
     queryParameters:
       songTitle:
@@ -78,25 +104,6 @@ resourceTypes:
         minLength: 3
         type: string
         example: "Get L"
-    responses:
-      200:
-        body:
-          application/json:
-            example: |
-                [
-                  {
-                    "songId": "550e8400-e29b-41d4-a716-446655440000",
-                    "songTitle": "Get Lucky"
-                  },
-                  {
-                    "songId": "550e8400-e29b-41d4-a716-446655440111",
-                    "songTitle": "Loose yourself to dance"
-                  },
-                  {
-                    "songId": "550e8400-e29b-41d4-a716-446655440222",
-                    "songTitle": "Gio sorgio by Moroder"
-                  }
-                ]
   /{songId}:
     description: Song entity
     get:
