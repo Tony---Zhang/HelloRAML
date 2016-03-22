@@ -14,16 +14,16 @@ version: v1
 ```
   
 ##2. ENTER RESOURCES
-* ####Resources all begin with a slash `(/)`
+* __Resources all begin with a slash__ `(/)`
 	
 ```
 /users:
   /authors:
   /books:
 ```
-#####_Each of these resources is a collection of individual objects._
+_Each of these resources is a collection of individual objects._
  
-* ####Define some sub-resources
+* __Define some sub-resources__
 
 ```
 /authors:
@@ -31,7 +31,7 @@ version: v1
 ```
       
 ##3. ENTER METHODS
-* ####GET, PUT, POST, DELETE(`lower case`)
+* __GET, PUT, POST, DELETE(`lower case`)__
 
 ```
 /books: 
@@ -62,7 +62,7 @@ version: v1
             get:
 
 ##5. ENTER QUERY PARAMETERS
-* ####Filtering a collection
+* __Filtering a collection__
 
 ```
 /books:
