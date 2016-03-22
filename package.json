@@ -1,0 +1,24 @@
+{
+  "name": "hello-raml",
+  "version": "1.0.0",
+  "description": "Description about test raml APIs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tony---Zhang/HelloRAML.git"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/raml2html test.raml > test.html"
+  },
+  "keywords": [
+    "raml"
+  ],
+  "author": "Zhang Shuai <520zhangshuai@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tony---Zhang/HelloRAML/issues"
+  },
+  "homepage": "https://github.com/Tony---Zhang/HelloRAML#readme",
+  "devDependencies": {
+    "raml2html": "^2.4.0"
+  }
+}
