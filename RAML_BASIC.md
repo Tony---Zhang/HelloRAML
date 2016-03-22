@@ -1,9 +1,9 @@
 ##1. ENTER ROOT
-* ####Basic information in text editor
+* __Basic information in text editor__
 
-* ####With extension `.raml`
+* __With extension `.raml`__
    
-* ####Root: apply to the rest of your API
+* __Root: apply to the rest of your API__
 	
 ```
 #%RAML 0.8
