@@ -11,3 +11,26 @@
   `npm run test`
   
 3. Open test.html 
+
+
+## References
+
+- RAML
+
+http://raml.org/
+
+- Swagger
+
+http://swagger.io/
+
+- API blueprint
+
+https://apiblueprint.org/
+
+- JSON Schema
+
+http://spacetelescope.github.io/understanding-json-schema/index.html
+
+- Session PDF
+
+[Session PDF](https://github.com/Tony---Zhang/HelloRAML/blob/master/doc/RAML.pdf)
