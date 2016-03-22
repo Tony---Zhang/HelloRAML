@@ -31,7 +31,7 @@ _Each of these resources is a collection of individual objects._
 ```
       
 ##3. ENTER METHODS
-* __GET, PUT, POST, DELETE(`lower case`)__
+* __GET, PUT, POST, DELETE__ (`lower case`)
 
 ```
 /books: 
