@@ -1,4 +1,4 @@
-##1. ENTER ROOT
+###1. ENTER ROOT
 * __Basic information in text editor__
 
 * __With extension `.raml`__
@@ -13,7 +13,7 @@ baseUri: http://api.e-bookmobile.com/{version}
 version: v1
 ```
   
-##2. ENTER RESOURCES
+###2. ENTER RESOURCES
 * __Resources all begin with a slash__ `(/)`
 	
 ```
@@ -30,7 +30,7 @@ _Each of these resources is a collection of individual objects._
   /{authorname}
 ```
       
-##3. ENTER METHODS
+###3. ENTER METHODS
 * __GET, PUT, POST, DELETE__ `(lower case)`
 
 ```
@@ -40,7 +40,7 @@ _Each of these resources is a collection of individual objects._
   put:
 ```
 
-##4. ENTER URI PARAMETERS
+###4. ENTER URI PARAMETERS
 
 
 ```
@@ -61,7 +61,7 @@ _Each of these resources is a collection of individual objects._
           /publisher:
             get:
 
-##5. ENTER QUERY PARAMETERS
+###5. ENTER QUERY PARAMETERS
 * __Filtering a collection__
 
 ```
@@ -88,7 +88,7 @@ _Each of these resources is a collection of individual objects._
 ```              
 `http://api.e-bookmobile.com/books/Stiff?access_token='ACCESS TOKEN'`
 
-##6. ENTER RESPONSES
+###6. ENTER RESPONSES
 ```
 /books:
   /{bookTitle}:
