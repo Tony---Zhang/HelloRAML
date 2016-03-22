@@ -1,5 +1,9 @@
 # HelloRAML
 
+## Basic raml
+
+[Document](https://github.com/Tony---Zhang/HelloRAML/blob/master/RAML_BASIC.md)
+
 ## Run visual doc
 
 1. Install all npm packages
